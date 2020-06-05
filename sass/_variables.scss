@@ -1,0 +1,75 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Colors */
+$primary-color: #f58220; /* ORANGE */
+$btn-secondary-color: #ffa200; /* ORANGE LIGHT */
+$checkbox-checked-color: #04ae00; /* GREEN */
+$checkbox-hover-bgcolor: #f5f5f2; /* GREY BARDZO JASNY*/
+$color-notif-posit: #74b67a; /* GREEN NOTIFICATION POSITIVE */
+$color-notif-posit-light: #96cc9b; /* GREEN NOTIFICATION POSITIVE LIGHT */ 
+$sidebar-color: rgba(0, 0, 0, 0.87); /* BLACK */
+$color-grey0: #333333;
+$color-grey1: #979797; /* GREY CIEMNY */
+$color-grey2: #cccccc; /* GREY  JASNIEJSZY*/
+$color-grey3: #e3e3e3; /* GREY JASNY */
+$color-grey4: #f5f5f2; /* GREY  BARDZO JASNY*/
+$nav-user-color: #56819f;
+$logo-font: 'Satisfy', cursive;
+$text-font: 'Lato', sans-serif;
+$base-color: #ffffff;
+
+/* Font sizes */
+$paragraph-font-size: 16px;
+
+/* Fonts */
+$brand-font: "Open Sans", Helvetica, Arial;
+$paragraph-font: "Open Sans", Helvetica, Arial;
+@font-face {
+    font-family: 'Glyphter';
+    src: url('../fonts/Glyphter.eot');
+    src: url('../fonts/Glyphter.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Glyphter.woff') format('woff'),
+         url('../fonts/Glyphter.ttf') format('truetype'),
+         url('../fonts/Glyphter.svg#Glyphter') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+[class*='icon-']:before{
+	display: inline-block;
+   font-family: 'Glyphter';
+   font-style: normal;
+   font-weight: 100;
+   line-height: 1;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale
+}
+.icon-arrow-down:before{content:'\0041';}
+.icon-arrow-down-small:before{content:'\0042';}
+.icon-arrow-left:before{content:'\0043';}
+.icon-arrow-right:before{content:'\0044';}
+.icon-arrow-up:before{content:'\0045';}
+.icon-arrow-up-small:before{content:'\0046';}
+.icon-banners:before{content:'\0047';}
+.icon-calendar:before{content:'\0048';}
+.icon-close:before{content:'\0049';}
+.icon-details:before{content:'\004a';}
+.icon-general:before{content:'\004b';}
+.icon-links:before{content:'\004c';}
+.icon-login:before{content:'\004d';}
+.icon-message:before{content:'\004e';}
+.icon-negative:before{content:'\004f';}
+.icon-notification:before{content:'\0050';}
+.icon-password:before{content:'\0051';}
+.icon-payout:before{content:'\0052';}
+.icon-personaldata:before{content:'\0053';}
+.icon-positive:before{content:'\0054';}
+.icon-postback:before{content:'\0055';}
+.icon-profile:before{content:'\0056';}
+.icon-quit:before{content:'\0057';}
+.icon-refresh:before{content:'\0058';}
+.icon-show:before{content:'\0059';}
+.icon-trash:before{content:'\005a';}
+.icon-url:before{content:'\0061';}
+.icon-wallet:before{content:'\0062';}

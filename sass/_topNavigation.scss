@@ -1,0 +1,113 @@
+@use "variables";
+
+.top-nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: $base-color;
+  align-items: stretch;
+}
+
+.top-nav-left {
+  display: flex;
+  width: 190px;
+  padding: 0 20px;
+  background-color: $sidebar-color;
+  justify-content: space-between;
+}
+
+.logo-title {
+  margin-top: 20px;
+  font-size: 25px;
+  color: $base-color;
+  font-family: $logo-font;
+}
+
+.top-nav-btn {
+  margin-top: 12px;
+  width: 18px;
+  height: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  & span {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: .45;
+    color: $color-grey2;
+  }
+}
+
+.top-nav-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: stretch;
+  div {
+    width: 60px;
+    color: $color-grey1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-right: .5px solid $color-grey3;
+    font-size: 18px;
+    i {
+      cursor: pointer;
+    }
+  }
+}
+
+.icon-arrow-down {
+  font-size: 10px;
+}
+
+.icon-quit {
+  font-size: 16px;
+}
+
+.nav-right-wallet {
+  margin: 0;
+  align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 190px;
+  border-left: .5px solid $color-grey3;
+  span {
+    font-weight: bolder;
+  }
+}
+
+.nav-right-profile {
+  margin: 0;
+  min-width: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  a {
+    font-size: 13px;
+    text-decoration: none;
+    color: $nav-user-color;
+  }
+}
+
+.nav-right-notif {
+  position: relative;
+  ::after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: 1px solid $primary-color;
+    top: 17px;
+    right: 21px;
+    background-color: $primary-color;
+    position: absolute;
+  }
+}
+
+

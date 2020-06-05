@@ -1,0 +1,102 @@
+@use "variables";
+
+.sidebar {
+  //width: 190px;
+}
+.sidebar-list {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 25px;
+  border-bottom: 1px solid $color-grey0;
+  div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 40px;
+    margin-bottom: 2px;
+    position: relative;    
+    cursor: pointer;
+    background-position: 100% 0;
+    background-size: 300%;
+    background-image: linear-gradient(90deg, $color-grey0 50%, transparent 50%);
+    transition: .7s ease;
+    ::after {
+      content: '';
+      display: none;
+      height: 40px;
+      width: 5px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: $primary-color;
+      transition: .7s ease;
+    }
+    i, span {
+      font-size: 14px;
+      margin-left: 16px;
+      color: $color-grey1;
+      transition: .7s ease;
+    }
+    &:hover {
+      background-position: 0 100%;
+      i,span {
+        color: $base-color;
+        margin-left: 30px;
+      }
+      ::after {
+        display: block;
+      }
+    }
+    
+  }
+}
+
+.sidebar-list div:hover .sidebar-list::after{
+  display: block;
+}
+
+.sidebar-manager{
+  flex-direction: column;
+  margin-left: 20px;
+  p {
+    font-size: 14px;
+    margin-top: 25px;
+  }
+}
+
+.your-manager {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 15px;
+}
+.manager-image {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background-color: $primary-color;
+  position: relative;
+  &::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    width: 12px;
+    height: 12px;
+    background-color: $checkbox-checked-color;
+    border-radius: 50%;
+  }
+  img {
+    background-color: $primary-color;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.manager-name {
+  margin-left: 10px;
+  font-size: 16px;
+  text-decoration: none;
+  color: $nav-user-color;
+}
