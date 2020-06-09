@@ -3,9 +3,12 @@ body {
   font-size: $paragraph-font-size;
   color: $color-grey1;
 }
+section {
+  //background-color: $color-grey4;
+}
 
 .container {
-  width: 1280px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
@@ -13,7 +16,9 @@ body {
   position: fixed;
   width: 100%;
   max-width: 1280px;
-  height: 60px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
   top: 0;
 }
 
@@ -21,37 +26,27 @@ body {
   width: 190px;
   height: 100vh;
   position: fixed;
-  top: 60px;
+  top: 0;
   background-color: $sidebar-color;
 }
 
 .content-wrapper {
   margin-top: 60px;
   margin-left: 190px;
-  height: 100vh;
-  max-width: 1280px;
-  border-top: .5px solid $color-grey3;
+  min-height: 100vh;
+  max-width: 1090px;
   background-color: $color-grey4;
+  border-top: $border-light;
 }
 
 .pages-wrapper {
   margin: 20px;
   background-color: $base-color;
   box-shadow: 1px 1px 10px $color-grey2;
+  border: $border-light;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-[class*="col"] {
+/*[class*="col"] {
   border-color: #f1c40f;
   padding: 5px;
   float: left;
@@ -103,4 +98,4 @@ body {
 
 .col-12 {
   width: 100%;
-}
+}*/

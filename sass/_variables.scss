@@ -16,12 +16,17 @@ $color-grey2: #cccccc; /* GREY  JASNIEJSZY*/
 $color-grey3: #e3e3e3; /* GREY JASNY */
 $color-grey4: #f5f5f2; /* GREY  BARDZO JASNY*/
 $nav-user-color: #56819f;
+
 $logo-font: 'Satisfy', cursive;
 $text-font: 'Lato', sans-serif;
 $base-color: #ffffff;
 
 /* Font sizes */
 $paragraph-font-size: 16px;
+
+/* border */
+
+$border-light: .5px solid $color-grey3;
 
 /* Fonts */
 $brand-font: "Open Sans", Helvetica, Arial;
@@ -73,3 +78,5 @@ $paragraph-font: "Open Sans", Helvetica, Arial;
 .icon-trash:before{content:'\005a';}
 .icon-url:before{content:'\0061';}
 .icon-wallet:before{content:'\0062';}
+
+

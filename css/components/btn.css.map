@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "btn.css",
+	"sources": [
+		"../../sass/components/btn.scss"
+	],
+	"names": [],
+	"mappings": ""
+}

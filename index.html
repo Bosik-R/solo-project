@@ -5,22 +5,14 @@
 	<title>Solo-project</title>
 <link href="https://fonts.googleapis.com/css2?family=Lato&family=Satisfy&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<header>
 		<div class="container">		
-			
 			<div class="top-nav-wrapper">	
 				<div class="top-nav">
-		  	  <div class="top-nav-left">
-		    		<span class="logo-title">Just do it</span>
-		    		<button class="top-nav-btn" type="button" name="button-sidebar">
-		    			<span>__</span>
-		    			<span>__</span>
-		    			<span>__</span>
-		   	 		</button>
-		    	</div>
 		  	  <div class="top-nav-right">
 		    		<div class="nav-right-wallet">
 		    			<i class="icon-wallet"></i>
@@ -42,6 +34,11 @@
 			</div>
 	  	<div class="sidebar-wrapper">
 	 	 		<div class="sidebar">
+					<div class="top-nav-left">
+						<span class="logo-title">Just do it</span>
+						<button class="hamburger" type="button" name="button-sidebar">
+						</button>
+					</div>
 	  	  	<div class="sidebar-list">
 	  	  		<div class="sidebar-list-general">
 	  	  		<i class="icon-general"></i>
@@ -85,14 +82,298 @@
 	</header>	
 	<div class="container">
 		<div class="content-wrapper">
-			<div class="pages-wrapper" id="page">
+			
+			<div id="page" class="pages-wrapper">
+				
 				<section id="general">
-					<div class="general-wrapper">
-						brdfg dfg dfg dfg df g<br><br><br>sfgsdfgg<br>
-					</div>
+					<div class="general-wrapper"></div>
 				</section>
+				<section id="links">
+					<div class="wrapper-links">
+					</div>
+					
+				</section>	
+					
 			</div>
 		</div>	  	
 	</div>
+	<script id="template-general" type="text/x-handlebars-template">
+		<div class="general">
+			<p class="page-title">GENERAL STATISTIC</p>
+			<div class="date-picker">
+				<div class="date-picker-plugin">
+					<div class="date-start">
+						07.06.2020
+					</div>
+					<div class="date-end">
+						07.06.2020
+					</div>
+					<i class="icon-calendar"></i>
+				</div>
+				<div class="date-picker-refresh">
+					<i class="icon-refresh"></i>
+				</div>	
+			</div>
+			<div class="chart-wrapper">
+				<div class="chart-stats">
+					<div class="visit-signups">
+						<span>Visit Signups</span>
+						<span>124</span>
+					</div>
+					<div class="net-deposite">
+						<span>Net deposite</span>
+						<span>564</span>
+					</div>
+					<div class="ftd">
+						<span>FTD</span>
+						<span>445</span>
+					</div>
+					<div class="turn-over">
+						<span>Turn over</span>
+						<span>432</span>
+					</div>
+				</div>
+				<div class="chart">
+					<p class="chart-title">Earning charts</p>
+					<canvas class="myChart" id="myChart"></canvas>
+				</div>
+			</div>
+			<div class="general-links">
+				<p class="page-title">LINKS</p>
+				<div class="flex-column">
+					<div class="row flex-center">
+						<button class="btn" type="button" name="plusAddNew">+ add new</button>
+					</div>
+					<div class="links-list flex-column">
+						<div class="link row">
+							<span class="link-title">Home page</span>
+							<div class="link-adress">
+								<a href="#">http://www.homepage.com
+								</a>
+								<div class="link-adress-options">
+									<i class="icon-links"></i>
+									<i class="icon-trash"></i>
+								</div>										
+							</div>
+						</div>
+						<div class="link row">
+							<span class="link-title">Currently offer</span>
+							<div class="link-adress">
+								<a href="#">http://www.currently.com</a>
+								<div class="link-adress-options">
+									<i class="icon-links"></i>
+									<i class="icon-trash"></i>
+								</div>										
+							</div>
+						</div>
+						<div class="link row">
+							<span class="link-title">Blurpix</span>
+							<div class="link-adress">
+								<a href="#">http://www.blurpix.com</a>
+								<div class="link-adress-options">
+									<i class="icon-links"></i>
+									<i class="icon-trash"></i>
+								</div>										
+							</div>
+						</div>
+						<div class="link row">
+							<span class="link-title">Your Site</span>
+							<div class="link-adress">
+								<a href="#">http://www.yoursite.com</a>
+								<div class="link-adress-options">
+									<i class="icon-links"></i>
+									<i class="icon-trash"></i>
+								</div>										
+							</div>
+						</div>
+						<div class="link row">
+							<span class="link-title">Google</span>
+							<div class="link-adress">
+								<a href="#">http://www.google.com</a>
+								<div class="link-adress-options">
+									<i class="icon-links"></i>
+									<i class="icon-trash"></i>
+								</div>										
+							</div>
+						</div>
+						<div class="link row">
+							<span class="link-title">Facebook</span>
+							<div class="link-adress">
+								<a href="#">http://www.facebook.com</a>
+								<div class="link-adress-options">
+									<i class="icon-links"></i>
+									<i class="icon-trash"></i>
+								</div>										
+							</div>
+						</div>
+						<div class="link row">
+							<span class="link-title">Dashboard</span>
+							<div class="link-adress">
+								<a href="#">http://www.dashboard.com</a>
+								<div class="link-adress-options">
+									<i class="icon-links"></i>
+									<i class="icon-trash"></i>
+								</div>										
+							</div>
+						</div>
+						<div class="link row">
+							<span class="link-title">Blurax</span>
+							<div class="link-adress">
+								<a href="#">http://www.blurax.com</a>
+								<div class="link-adress-options">
+									<i class="icon-links"></i>
+									<i class="icon-trash"></i>
+								</div>										
+							</div>
+						</div>
+						<div class="link row">
+							<span class="link-title">Piece of Wine</span>
+							<div class="link-adress">
+								<a href="#">http://www.pieceofwine.com</a>
+								<div class="link-adress-options">
+									<i class="icon-links"></i>
+									<i class="icon-trash"></i>
+								</div>										
+							</div>
+						</div>
+						<div class="link row">
+							<span class="link-title">Twitter</span>
+							<div class="link-adress">
+								<a href="#">http://www.twitter.com</a>
+								<div class="link-adress-options">
+									<i class="icon-links"></i>
+									<i class="icon-trash"></i>
+								</div>										
+							</div>
+						</div>
+					</div>		
+					<div class="row flex-center">
+						<button class="btn" type="button" name="plusAddNew">+ add new</button>
+					</div>
+				</div>
+			</div>						
+		</div>
+	</script>
+	<script id="template-links" type="text/x-handlebars-template">
+		<p class="page-title">LINKS</p>
+		<div class="flex-column">
+			<div class="row flex-center">
+				<button class="btn" type="button" name="plusAddNew">+ add new</button>
+			</div>
+			<div class="links-list flex-column">
+				<div class="link row">
+					<span class="link-title">Home page</span>
+					<div class="link-adress">
+						<a href="#">http://www.homepage.com
+						</a>
+						<div class="link-adress-options">
+							<i class="icon-links"></i>
+							<i class="icon-trash"></i>
+						</div>										
+					</div>
+				</div>
+				<div class="link row">
+					<span class="link-title">Currently offer</span>
+					<div class="link-adress">
+						<a href="#">http://www.currently.com</a>
+						<div class="link-adress-options">
+							<i class="icon-links"></i>
+							<i class="icon-trash"></i>
+						</div>										
+					</div>
+				</div>
+				<div class="link row">
+					<span class="link-title">Blurpix</span>
+					<div class="link-adress">
+						<a href="#">http://www.blurpix.com</a>
+						<div class="link-adress-options">
+							<i class="icon-links"></i>
+							<i class="icon-trash"></i>
+						</div>										
+					</div>
+				</div>
+				<div class="link row">
+					<span class="link-title">Your Site</span>
+					<div class="link-adress">
+						<a href="#">http://www.yoursite.com</a>
+						<div class="link-adress-options">
+							<i class="icon-links"></i>
+							<i class="icon-trash"></i>
+						</div>										
+					</div>
+				</div>
+				<div class="link row">
+					<span class="link-title">Google</span>
+					<div class="link-adress">
+						<a href="#">http://www.google.com</a>
+						<div class="link-adress-options">
+							<i class="icon-links"></i>
+							<i class="icon-trash"></i>
+						</div>										
+					</div>
+				</div>
+				<div class="link row">
+					<span class="link-title">Facebook</span>
+					<div class="link-adress">
+						<a href="#">http://www.facebook.com</a>
+						<div class="link-adress-options">
+							<i class="icon-links"></i>
+							<i class="icon-trash"></i>
+						</div>										
+					</div>
+				</div>
+				<div class="link row">
+					<span class="link-title">Dashboard</span>
+					<div class="link-adress">
+						<a href="#">http://www.dashboard.com</a>
+						<div class="link-adress-options">
+							<i class="icon-links"></i>
+							<i class="icon-trash"></i>
+						</div>										
+					</div>
+				</div>
+				<div class="link row">
+					<span class="link-title">Blurax</span>
+					<div class="link-adress">
+						<a href="#">http://www.blurax.com</a>
+						<div class="link-adress-options">
+							<i class="icon-links"></i>
+							<i class="icon-trash"></i>
+						</div>										
+					</div>
+				</div>
+				<div class="link row">
+					<span class="link-title">Piece of Wine</span>
+					<div class="link-adress">
+						<a href="#">http://www.pieceofwine.com</a>
+						<div class="link-adress-options">
+							<i class="icon-links"></i>
+							<i class="icon-trash"></i>
+						</div>										
+					</div>
+				</div>
+				<div class="link row">
+					<span class="link-title">Twitter</span>
+					<div class="link-adress">
+						<a href="#">http://www.twitter.com</a>
+						<div class="link-adress-options">
+							<i class="icon-links"></i>
+							<i class="icon-trash"></i>
+						</div>										
+					</div>
+				</div>
+			</div>		
+			<div class="row flex-center">
+				<button class="btn" type="button" name="plusAddNew">+ add new</button>
+			</div>
+		</div>
+	</script>
+	
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+	<script src="js/script.js" type="module"></script>
+
 </body>
 </html>

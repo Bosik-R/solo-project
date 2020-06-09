@@ -6,11 +6,12 @@
 
 
 ///* Sections */
-@import "topNavigation";
-@import "sidebar";
+@import "sections/topNavigation";
+@import "sections/sidebar";
 //@import "section/registration_form";
 //
 ///* Pages / Views */
 @import "pages/general";
+@import "pages/links";
 //@import "pages/registration";
 
