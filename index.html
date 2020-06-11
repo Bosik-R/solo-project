@@ -41,33 +41,33 @@
 					</div>
 	  	  	<div class="sidebar-list">
 	  	  		<div class="sidebar-list-general">
-	  	  		<i class="icon-general"></i>
-	  	  		<span>General</span>
-	  	  	</div>
+	  	  			<i class="icon-general"></i>
+	  	  			<span>General</span>
+	  	  		</div>
 	  	  		<div class="sidebar-list-details">
-	  	  		<i class="icon-details"></i>
-	  	  		<span>Details</span>
-	  	  	</div>
+	  	  			<i class="icon-details"></i>
+	  	  			<span>Details</span>
+	  	  		</div>
 	  	  		<div class="sidebar-list-links">
-	  	  		<i class="icon-links"></i>
-	  	  		<span>Links</span>
-	  	  	</div>
+	  	  			<i class="icon-links"></i>
+	  	  			<span>Links</span>
+	  	  		</div>
 	  	  		<div class="sidebar-list-banners">
-	  	  		<i class="icon-banners"></i>
-	  	  		<span>Banners</span>
-	  	  	</div>
+	  	  			<i class="icon-banners"></i>
+	  	  			<span>Banners</span>
+	  	  		</div>
 	  	  		<div class="sidebar-list-personal-data">
-	  	  		<i class="icon-personaldata"></i>
-	  	  		<span>Personal data</span>
-	  	  	</div>
+	  	  			<i class="icon-personaldata"></i>
+	  	  			<span>Personal data</span>
+	  	  		</div>
 	  	  		<div class="sidebar-list-payout">
-	  	  		<i class="icon-payout"></i>
-	  	  		<span>Payout</span>
-	  	  	</div>
+	  	  			<i class="icon-payout"></i>
+	  	  			<span>Payout</span>
+	  	  		</div>
 	  	  		<div class="sidebar-list-postback">
-	  	  		<i class="icon-postback"></i>
-	  	  		<span>Postback</span>
-	  	  	</div>
+	  	  			<i class="icon-postback"></i>
+	  	  			<span>Postback</span>
+	  	  		</div>
 	  	  	</div>
 	  	 		<div class="sidebar-manager">
 	  	 			<p>YOUR MANAGER</p>
@@ -83,22 +83,21 @@
 	<div class="container">
 		<div class="content-wrapper">
 			
-			<div id="page" class="pages-wrapper">
-				
+			<div id="pages">
 				<section id="general">
-					<div class="general-wrapper"></div>
+					<div class="general-wrapper "></div>
+					<div class="wrapper-second-option"></div>
 				</section>
 				<section id="links">
-					<div class="wrapper-links">
-					</div>
-					
+					<div class="links-wrapper"></div>
 				</section>	
 					
 			</div>
 		</div>	  	
 	</div>
+
 	<script id="template-general" type="text/x-handlebars-template">
-		<div class="general">
+		<div class="general-content box-border-shadow">
 			<p class="page-title">GENERAL STATISTIC</p>
 			<div class="date-picker">
 				<div class="date-picker-plugin">
@@ -138,125 +137,13 @@
 					<canvas class="myChart" id="myChart"></canvas>
 				</div>
 			</div>
-			<div class="general-links">
-				<p class="page-title">LINKS</p>
-				<div class="flex-column">
-					<div class="row flex-center">
-						<button class="btn" type="button" name="plusAddNew">+ add new</button>
-					</div>
-					<div class="links-list flex-column">
-						<div class="link row">
-							<span class="link-title">Home page</span>
-							<div class="link-adress">
-								<a href="#">http://www.homepage.com
-								</a>
-								<div class="link-adress-options">
-									<i class="icon-links"></i>
-									<i class="icon-trash"></i>
-								</div>										
-							</div>
-						</div>
-						<div class="link row">
-							<span class="link-title">Currently offer</span>
-							<div class="link-adress">
-								<a href="#">http://www.currently.com</a>
-								<div class="link-adress-options">
-									<i class="icon-links"></i>
-									<i class="icon-trash"></i>
-								</div>										
-							</div>
-						</div>
-						<div class="link row">
-							<span class="link-title">Blurpix</span>
-							<div class="link-adress">
-								<a href="#">http://www.blurpix.com</a>
-								<div class="link-adress-options">
-									<i class="icon-links"></i>
-									<i class="icon-trash"></i>
-								</div>										
-							</div>
-						</div>
-						<div class="link row">
-							<span class="link-title">Your Site</span>
-							<div class="link-adress">
-								<a href="#">http://www.yoursite.com</a>
-								<div class="link-adress-options">
-									<i class="icon-links"></i>
-									<i class="icon-trash"></i>
-								</div>										
-							</div>
-						</div>
-						<div class="link row">
-							<span class="link-title">Google</span>
-							<div class="link-adress">
-								<a href="#">http://www.google.com</a>
-								<div class="link-adress-options">
-									<i class="icon-links"></i>
-									<i class="icon-trash"></i>
-								</div>										
-							</div>
-						</div>
-						<div class="link row">
-							<span class="link-title">Facebook</span>
-							<div class="link-adress">
-								<a href="#">http://www.facebook.com</a>
-								<div class="link-adress-options">
-									<i class="icon-links"></i>
-									<i class="icon-trash"></i>
-								</div>										
-							</div>
-						</div>
-						<div class="link row">
-							<span class="link-title">Dashboard</span>
-							<div class="link-adress">
-								<a href="#">http://www.dashboard.com</a>
-								<div class="link-adress-options">
-									<i class="icon-links"></i>
-									<i class="icon-trash"></i>
-								</div>										
-							</div>
-						</div>
-						<div class="link row">
-							<span class="link-title">Blurax</span>
-							<div class="link-adress">
-								<a href="#">http://www.blurax.com</a>
-								<div class="link-adress-options">
-									<i class="icon-links"></i>
-									<i class="icon-trash"></i>
-								</div>										
-							</div>
-						</div>
-						<div class="link row">
-							<span class="link-title">Piece of Wine</span>
-							<div class="link-adress">
-								<a href="#">http://www.pieceofwine.com</a>
-								<div class="link-adress-options">
-									<i class="icon-links"></i>
-									<i class="icon-trash"></i>
-								</div>										
-							</div>
-						</div>
-						<div class="link row">
-							<span class="link-title">Twitter</span>
-							<div class="link-adress">
-								<a href="#">http://www.twitter.com</a>
-								<div class="link-adress-options">
-									<i class="icon-links"></i>
-									<i class="icon-trash"></i>
-								</div>										
-							</div>
-						</div>
-					</div>		
-					<div class="row flex-center">
-						<button class="btn" type="button" name="plusAddNew">+ add new</button>
-					</div>
-				</div>
-			</div>						
 		</div>
 	</script>
+
 	<script id="template-links" type="text/x-handlebars-template">
-		<p class="page-title">LINKS</p>
-		<div class="flex-column">
+		<div class="links-content box-border-shadow">
+			<p class="page-title">LINKS</p>
+			<div class="flex-column">
 			<div class="row flex-center">
 				<button class="btn" type="button" name="plusAddNew">+ add new</button>
 			</div>
@@ -365,6 +252,7 @@
 			</div>		
 			<div class="row flex-center">
 				<button class="btn" type="button" name="plusAddNew">+ add new</button>
+			</div>
 			</div>
 		</div>
 	</script>

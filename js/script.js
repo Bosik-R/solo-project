@@ -1,23 +1,56 @@
-const templates = {
-  general: Handlebars.compile(document.querySelector('#template-general').innerHTML),
+'use strict';
+
+const navLinks = document.querySelectorAll('.sidebar-list div');
+const pages = document.querySelector('#pages').children;
+const secondOption = '#template-links';
+
+const defaultPage = pages[0].id;
+let pageMatchingHash = defaultPage;
+
+const idFromHash = window.location.hash.replace('#/', '');
+
+for (let page of pages){
+  if (page.id == idFromHash){
+    pageMatchingHash = page.id;
+    break;
+  }
 }
-const utils = {};
 
-utils.createDOMFromHTML = function(htmlString) {
-  let div = document.createElement('div');
-  div.innerHTML = htmlString.trim();
-  return div.firstChild;
-};
+for (let link of navLinks){
+  link.addEventListener('click', function(event){
+    event.preventDefault();
 
-const generateHTML = templates.general();
+    const clickedElement = this;
+    
+    const classToId = clickedElement.classList.item(0);
 
-const wrapper = document.querySelector('.general-wrapper');
+    const id = classToId.replace('sidebar-list-', '');
+    
+    activatePage(id);
 
-wrapper.appendChild(utils.createDOMFromHTML(generateHTML));
+    window.location.hash = '#/' + id;
+  });
+}
 
-var ctx = document.getElementById('myChart').getContext('2d');
+const activatePage = function(pageId){
+  console.log(pageId);
+  
+  const wrapper = document.querySelector('.' + pageId + '-wrapper');
+  
+  const select = '#template-' + pageId;
+  
+  const template = Handlebars.compile(document.querySelector(select).innerHTML);
+  
+  const generateHTML = template();
+  
+  wrapper.innerHTML = generateHTML;
 
-var chart = new Chart(ctx, {
+  for (let page of pages){
+    page.classList.toggle('active', page.id == pageId);
+
+    if (page.id === pages[0].id) {
+      var ctx = document.getElementById('myChart').getContext('2d');
+      var chart = new Chart(ctx, {
     // 1
     type: 'bar',
     data: {
@@ -48,7 +81,19 @@ var chart = new Chart(ctx, {
             hidden: true,
         }]
     },
-});
+      });
+      const secondWrapper = document.querySelector('.wrapper-second-option'); 
+      const secondTemplate = Handlebars.compile(document.querySelector(secondOption).innerHTML);
+      const html = secondTemplate();
+      secondWrapper.innerHTML = html;
+
+    } 
+  }
+}
+
+activatePage(pageMatchingHash);
+
+window.location.hash = '#/' + pageMatchingHash;
 
 
 

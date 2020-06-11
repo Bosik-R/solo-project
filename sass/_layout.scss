@@ -1,10 +1,21 @@
+#pages {
+  > * {
+    display: none;
+  }
+
+  > .active {
+    display: block;
+  }
+}
+
+
 body {
   font-family: $brand-font;
   font-size: $paragraph-font-size;
   color: $color-grey1;
 }
 section {
-  //background-color: $color-grey4;
+  background-color: $color-grey4;
 }
 
 .container {
@@ -37,13 +48,18 @@ section {
   max-width: 1090px;
   background-color: $color-grey4;
   border-top: $border-light;
+  border-bottom: $border-light;
 }
 
-.pages-wrapper {
-  margin: 20px;
+//.general-content{
+//}
+
+.box-border-shadow{
   background-color: $base-color;
+  margin: 20px;
   box-shadow: 1px 1px 10px $color-grey2;
   border: $border-light;
+  
 }
 
 /*[class*="col"] {
