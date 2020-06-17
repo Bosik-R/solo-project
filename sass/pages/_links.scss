@@ -3,15 +3,19 @@
   border-top: 3px solid black;
 }
 .row {
-  width: 100%;
-  padding: 20px 20px;
+  padding: 20px;
 }
 .row-bb {
   @extend .row;
   border-bottom: $border-light;
 }
+.flex-nw {
+  display: flex;
+  flex-wrap: nowrap;
+}
 .flex-center {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
@@ -46,6 +50,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  flex-wrap: wrap;
   border-bottom: $border-light;
   transition: .5s ease;
 }
@@ -56,24 +61,21 @@
   }
 }
 .link-title {
-  width: 45%;
-  font-size: 16px;
   font-weight: bold;
+  padding: 5px;
 }
 .link-adress {
-  width: 55%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 5px;
   a {
-    width: 60%;
     text-decoration: none;
     color: $nav-user-color;
   }
 }
 .link-adress-options {
   opacity: 0;
-  width: 40%;
   display: flex;
   justify-content: flex-end;
   i {

@@ -1,56 +1,85 @@
-'use strict';
+const adminInterface = {
+  initPages: function(){
+    const thisApp = this;
 
-const navLinks = document.querySelectorAll('.sidebar-list div');
-const pages = document.querySelector('#pages').children;
-const secondOption = '#template-links';
+    thisApp.navLinks = document.querySelectorAll('.sidebar-list div');
+    thisApp.pages = document.querySelector('#pages').children;
+    thisApp.secondOptionTemplate = '#template-links';
+    thisApp.secondOptionWrapper = '.wrapper-second-option';
 
-const defaultPage = pages[0].id;
-let pageMatchingHash = defaultPage;
+    const idFromHash = window.location.hash.replace('#/', '');
 
-const idFromHash = window.location.hash.replace('#/', '');
-
-for (let page of pages){
-  if (page.id == idFromHash){
-    pageMatchingHash = page.id;
-    break;
-  }
-}
-
-for (let link of navLinks){
-  link.addEventListener('click', function(event){
-    event.preventDefault();
-
-    const clickedElement = this;
+    thisApp.defaultPage = thisApp.pages[0].id;
+    let pageMatchingHash = thisApp.defaultPage;
     
-    const classToId = clickedElement.classList.item(0);
-
-    const id = classToId.replace('sidebar-list-', '');
     
-    activatePage(id);
+    for (let page of thisApp.pages){
+      if (page.id == idFromHash){
+        pageMatchingHash = page.id;
+        break;
+      }
+    }
+    
+    thisApp.activatePage(pageMatchingHash);
 
-    window.location.hash = '#/' + id;
-  });
-}
+    window.location.hash = '#/' + pageMatchingHash;
 
-const activatePage = function(pageId){
-  console.log(pageId);
-  
-  const wrapper = document.querySelector('.' + pageId + '-wrapper');
-  
-  const select = '#template-' + pageId;
-  
-  const template = Handlebars.compile(document.querySelector(select).innerHTML);
-  
-  const generateHTML = template();
-  
-  wrapper.innerHTML = generateHTML;
+    for (let link of thisApp.navLinks){
+      link.addEventListener('click', function(event){
+        const clickedElement = this;
+        event.preventDefault();
 
-  for (let page of pages){
-    page.classList.toggle('active', page.id == pageId);
+        const classToId = clickedElement.classList.item(0);
 
-    if (page.id === pages[0].id) {
-      var ctx = document.getElementById('myChart').getContext('2d');
-      var chart = new Chart(ctx, {
+        const id = classToId.replace('sidebar-list-', '');
+        
+        thisApp.activatePage(id);
+
+        window.location.hash = '#/' + id;
+      });
+    }
+
+    thisApp.sidebarWrapper = document.querySelector('.sidebar-wrapper');
+    thisApp.contentWrapper = document.querySelector('.content-wrapper');
+    
+    function toggleMenu(visible) {
+      
+      thisApp.sidebarWrapper.classList.toggle('show', visible);
+      thisApp.contentWrapper.classList.toggle('dim', visible);
+      
+    }
+
+    thisApp.contentWrapper.addEventListener('click', function(e){
+      e.preventDefault();
+      toggleMenu(false);
+    });
+
+    document.querySelector('.hamburger').addEventListener('click', function(e){
+      e.preventDefault();
+      toggleMenu()
+    });
+  },
+
+  activatePage: function(pageId){
+    console.log(pageId);
+    const thisApp = this;
+
+    thisApp.wrapper = document.querySelector('.' + pageId + '-wrapper');
+
+    const select = '#template-' + pageId;
+
+    const template = Handlebars.compile(document.querySelector(select).innerHTML);
+
+    const generateHTML = template();
+
+    thisApp.wrapper.innerHTML = generateHTML;
+
+    for (let page of thisApp.pages){
+      page.classList.toggle('active', page.id == pageId);
+
+      if (page.id === thisApp.pages[0].id) {
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var chart = new Chart(ctx, {
     // 1
     type: 'bar',
     data: {
@@ -81,21 +110,22 @@ const activatePage = function(pageId){
             hidden: true,
         }]
     },
-      });
-      const secondWrapper = document.querySelector('.wrapper-second-option'); 
-      const secondTemplate = Handlebars.compile(document.querySelector(secondOption).innerHTML);
-      const html = secondTemplate();
-      secondWrapper.innerHTML = html;
+        });
+        thisApp.secondWrapper = document.querySelector(thisApp.secondOptionWrapper); 
+        const secondTemplate = Handlebars.compile(document.querySelector(thisApp.secondOptionTemplate).innerHTML);
+        const html = secondTemplate();
+        thisApp.secondWrapper.innerHTML = html;
+      } 
+    }
+  },
 
-    } 
+  init: function(){
+    const thisApp = this;
+
+    thisApp.initPages();
   }
 }
-
-activatePage(pageMatchingHash);
-
-window.location.hash = '#/' + pageMatchingHash;
-
-
+adminInterface.init();
 
 
 /* const dateToStr = function(dateObj){

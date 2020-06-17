@@ -8,6 +8,13 @@
   }
 }
 
+@for $i from 1 through 12 {
+  .col-sm-#{$i} {
+      $width: 100% / 12 * $i;
+      flex: 0 0 $width;
+      max-width: $width;
+  }
+}
 
 body {
   font-family: $brand-font;
@@ -20,6 +27,7 @@ section {
 
 .container {
   max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -27,17 +35,17 @@ section {
   position: fixed;
   width: 100%;
   max-width: 1280px;
-  display: flex;
-  margin: 0 auto;
-  justify-content: center;
   top: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
 }
 
 .sidebar-wrapper {
   width: 190px;
   height: 100vh;
   position: fixed;
-  top: 0;
+  top: 60px;
   background-color: $sidebar-color;
 }
 
@@ -51,9 +59,6 @@ section {
   border-bottom: $border-light;
 }
 
-//.general-content{
-//}
-
 .box-border-shadow{
   background-color: $base-color;
   margin: 20px;
@@ -61,57 +66,3 @@ section {
   border: $border-light;
   
 }
-
-/*[class*="col"] {
-  border-color: #f1c40f;
-  padding: 5px;
-  float: left;
-}
-
-.col-1 {
-  width: 8.334%;
-}
-
-.col-2 {
-  width: 16.667%;
-}
-
-.col-3 {
-  width: 25%;
-}
-
-.col-4 {
-  width: 33.334%;
-}
-
-.col-5 {
-  width: 41.667%;
-}
-
-.col-6 {
-  width: 50%;
-}
-
-.col-7 {
-  width: 58.334%;
-}
-
-.col-8 {
-  width: 66.667%;
-}
-
-.col-9 {
-  width: 75%;
-}
-
-.col-10 {
-  width: 83.334%;
-}
-
-.col-11 {
-  width: 91.667%;
-}
-
-.col-12 {
-  width: 100%;
-}*/
