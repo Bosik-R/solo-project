@@ -16,6 +16,7 @@
 
   &:hover {
     background-color: $bg-snd-color;
+
     .link-adress-options{
       opacity: 1;
     }
@@ -29,6 +30,7 @@
 
 .link-adress {
   padding: 5px;
+  
   a {
     text-decoration: none;
     color: $nav-user-color;

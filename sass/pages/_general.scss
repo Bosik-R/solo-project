@@ -55,8 +55,9 @@
     border-bottom: $border-light;
     display: flex;
     justify-content: space-between;
+    
     span:nth-child(2) {
-    color: black;
+      color: black;
     }
   }
 }

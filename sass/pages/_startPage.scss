@@ -1,55 +1,54 @@
 .startPage-content {
-    width: 100%;
-    max-width: 720px;
-    height: auto;
-    margin: 0;
-    background-color: $base-color;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  margin: 0;
+  background-color: $base-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 
-    span {
-      width: 100%;
-      text-transform: uppercase;
-      border-bottom: $border-light;
-      padding: 15px;
-    }
-  }
-
-  .startPage-wrapper {
+  span {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px;
-  
-    button {
-      width: 160px;
-    }
-  
+    text-transform: uppercase;
+    border-bottom: $border-light;
+    padding: 15px;
   }
-  
-  .input-wrapper {
-    position: relative;
-    width: 100%;
-    max-width: 210px;
-    margin: 10px;
-  
-    i {
-      position: absolute;
-      left: 10px;
-      top: 13px;
-      font-size: 16px;
-    }
+}
 
-    input {
-      width: 100%;
-      height: 40px;
-      padding-left: 40px;
-      border: $border-light;
-      border-radius: 5px;
-      color: $font-color;
-      outline-color: $brand-primary-color;
-    }
+.startPage-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+
+  button {
+    width: 160px;
   }
+}
+  
+.input-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 210px;
+  margin: 10px;
+
+  i {
+    position: absolute;
+    left: 10px;
+    top: 13px;
+    font-size: 16px;
+  }
+  
+  input {
+    width: 100%;
+    height: 40px;
+    padding-left: 40px;
+    border: $border-light;
+    border-radius: 5px;
+    color: $font-color;
+    outline-color: $brand-primary-color;
+  }
+}

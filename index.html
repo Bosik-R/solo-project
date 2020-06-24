@@ -28,8 +28,8 @@
 		    			<i class="icon-notification"></i>
 		    		</div>
 		    		<div class="profile">
-		    			<i class="icon-profile button-modal" id="myProfile"></i>
-		    			<span id="profile-name">Leonard Cohen</span>
+		    			<i class="icon-profile button-modal"></i>
+		    			<span class="profile-name">Leonard Cohen</span>
 		    		</div>
 		    		<div class="logout">
 		    			<i class="icon-quit button-modal" id="logout"></i>
@@ -87,11 +87,11 @@
 									<i class="icon-notification"></i>
 									<a href="#">Notification</a>
 								</div>
-								<div class="profile button-modal" id="myProfile">
+								<div class="profile">
 									<i class="icon-profile"></i>
-									<a href="#" id="profile-name">Leonard Cohen</a>
+									<a href="#" class="profile-name">Leonard Cohen</a>
 								</div>
-								<div class="logout button-modal" id="logout">
+								<div class="logout button-modal" id="logout1">
 									<i class="icon-quit"></i>
 									<a href="#">Log Out</a>
 								</div>
@@ -102,11 +102,11 @@
 			</div>	
 		</div>
 		<div class="overlay" id="overlay">
-			<div class="modal modal-logout" id="modal-logout">
+			<div class="modal modal-logout modal-logout1" >
 				<p class="page-title">Do you really want to Quit?</p>
 				<div class="row">
-					<button class="btn btn-negativ js--close-modal">Cancel</button>				
-					<button class="btn js--close-modal" id="quit-button">Quit</button>
+					<button type="button" class="btn btn-negativ js--close-modal">Cancel</button>				
+					<button type="button" class="btn js--close-modal" id="quit-button">Quit</button>
 				</div>
 			</div>
 			<div class="modal modal-addNewLink" id="modal-addNewLink">
@@ -138,7 +138,7 @@
 							<input type="checkbox" id="ToyStore" value="true" hidden>
 							<label for="ToyStore">
 									<span></span>
-									<p>Toy Store</p>
+									Toy Store
 							</label>
 							<i class="icon-show"></i>
 						</div>
@@ -146,7 +146,7 @@
 							<input type="checkbox" id="bookStore" value="true" hidden>
 							<label for="bookStore">
 									<span></span>
-									<p>Book Store</p>
+									Book Store
 							</label>
 							<i class="icon-show"></i>
 						</div>
@@ -154,7 +154,7 @@
 							<input type="checkbox" id="EShop01" value="true" hidden>
 							<label for="EShop01">
 									<span></span>
-									<p>E-Shop 01</p>
+									E-Shop 01
 							</label>
 							<i class="icon-show"></i>
 						</div>
@@ -162,7 +162,7 @@
 							<input type="checkbox" id="charity" value="true" hidden>
 							<label for="charity">
 									<span></span>
-									<p>Charity</p>
+									Charity
 							</label>
 							<i class="icon-show"></i>
 						</div>
@@ -170,7 +170,7 @@
 							<input type="checkbox" id="MobilleApp" value="true" hidden>
 							<label for="MobilleApp">
 									<span></span>
-									<p>Mobille App</p>
+									Mobille App
 							</label>
 							<i class="icon-show"></i>
 						</div>
@@ -178,7 +178,7 @@
 							<input type="checkbox" id="MobilleStore" value="true" hidden>
 							<label for="MobilleStore">
 									<span></span>
-									<p>Mobille Store</p>
+									Mobille Store
 							</label>
 							<i class="icon-show"></i>
 						</div>
@@ -186,11 +186,11 @@
 					<div class="links-button-area row flex-sb">
 						<input type="text" class="col-sm-12" placeholder="Generate link">
 						<div class="col-sm-12 flex-sb">
-							<button class="btn btn-negativ btn-copy">
+							<button type="button" class="btn btn-negativ btn-copy">
 								<i class="icon-links"></i>
 								<span>Copy link</span> 
 							</button>				
-							<button class="btn btn-base">Save</button>
+							<button type="submit" class="btn btn-base">Save</button>
 						</div>
 					</div>
 				</form>
