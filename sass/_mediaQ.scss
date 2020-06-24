@@ -1,67 +1,90 @@
 @media(max-width: 767px) {
-    @include grid('sm');
-    
-    $paragraph-font-size: 12px;
-    
-    .top-nav-right {
-      display: none;
-    }
-    .content-wrapper {
-      margin-left: 0;
-      transition: right 0.7s ease-in-out;
-      overflow: hidden;
-    }
-    .sidebar-profile-wrapper {
-      border-top: $border-light;
-      border-color: $color-grey0;
-      display: block;
-    }
-    .sidebar-wrapper {
-      display: none;
-      height: auto;
-      width: 190px;
-      transition: all 1s linear;
-      right: -190px;
-    }
-    .push {
-      width: 190px;
-      z-index: 1;
-    }
-    .dim {
-      position: relative;
-      left: -200px;
-      opacity: 0.2;
-    }
-    .top-nav-left {
-      width: 100%;
-    }
-    .logo-title {
-      margin-left: 20px;
-      text-align: center;
-    }
-    body {
-     font-size: 12px;
-    }
-    .box-border-shadow{
-      margin: 10px 0;
-    }
-    .row {
-      padding: 20px 5px;
-    }
-    .show {
-        display: block;
-        right: 0;
-        //transition: right 1s ease 0s;
-      }
-  }
+  @include grid('sm');
   
-  @media(min-width: 768px) {
-    @include grid('md');
+  body {
+    font-size: 12px;
+   }
+
+  .top-nav-right {
+    display: none;
   }
-  @media(min-width: 992px) {
-    @include grid('lg');
+
+  .top-nav-left {
+    width: 100%;
+    z-index: 1;
   }
-  
-  @media(min-width: 1200px) {
-    @include grid('xl');
+
+  .overlay {
+    padding: 10px;
   }
+
+  .dim {
+    position: relative;
+    left: -200px;
+    opacity: 0.2;
+  }
+ 
+  .logo-title {
+    margin-left: 20px;
+    text-align: center;
+  }
+
+  .box-border-shadow{
+    margin: 10px 0;
+  }
+
+  .row {
+    padding: 20px 5px;
+  }
+
+  .content-wrapper {
+    margin-left: 0;
+    transition: right 0.7s ease-in-out;
+    overflow: hidden;
+  }
+
+  .sidebar-profile-wrapper {
+    border-top: $border-light;
+    border-color: $border-color-second;
+    display: block;
+  }
+
+  .sidebar-wrapper {
+    display: block;
+    height: auto;
+    width: 190px;
+    right: -190px;
+    transition: 0.5s;
+    transition-property: right;
+  }
+
+  .sidebar-wrapper.slide {
+    right: 0;
+  }
+
+ .startPage-wrapper {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .links-button-area > input[type="text"] {
+    margin-bottom: 15px;
+  }
+
+  .link:hover .link-adress > a {
+    overflow-x: auto;
+    text-overflow: ellipsis;
+  }
+}
+
+@media(min-width: 768px) {
+  @include grid('md');
+}
+
+@media(min-width: 992px) {
+  @include grid('lg');
+}
+
+@media(min-width: 1200px) {
+  @include grid('xl');
+}

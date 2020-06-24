@@ -6,12 +6,46 @@
   display: flex;
   background-color: $base-color;
 }
+
 .top-nav-left {
   width: 190px;
   height: 60px;
   padding: 0 20px;
   background-color: $sidebar-color;
 }
+
+.logo-title {
+  font-size: 25px;
+  color: $base-color;
+  font-family: $logo-font;
+}
+
+.hamburger {
+  width:20px;
+  height: 20px;
+  border: 0;
+  border-top: 2px solid $font-color;
+  background: transparent;
+  position: relative; 
+  cursor: pointer; 
+  transition: .5 ease;
+  outline: none;
+}
+
+.hamburger::before, .hamburger::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-top: 2px solid $font-color;
+  transform: translateY(7px);
+}
+
+.hamburger::after {
+  transform: translateY(16px);
+}
+
 .top-nav-right {
   flex: 1;
   max-width: 1090px;
@@ -21,13 +55,15 @@
   height: 60px;
   border-bottom: $border-light;
   border-right: $border-light;
+  z-index: 9999;
+  
   div {
     width: 60px;
-    color: $color-grey1;
+    color: $font-color;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    border-left: .5px solid $color-grey3;
+    border-left: .5px solid $border-color-primary;
     font-size: 18px;
     i {
       cursor: pointer;
@@ -50,7 +86,7 @@
   align-items: center;
   justify-content: space-around;
   min-width: 190px;
-  //border-left: .5px solid $color-grey3;
+  
   span {
     font-weight: bolder;
   }
@@ -62,7 +98,8 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  a {
+
+  span {
     font-size: 13px;
     text-decoration: none;
     color: $nav-user-color;
@@ -76,12 +113,10 @@
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    border: 1px solid $primary-color;
+    border: 1px solid $brand-primary-color;
     top: 17px;
     right: 21px;
-    background-color: $primary-color;
+    background-color: $brand-primary-color;
     position: absolute;
   }
 }
-
-

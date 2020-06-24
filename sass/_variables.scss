@@ -3,34 +3,32 @@
 }
 
 /* Colors */
-$primary-color: #f58220; /* ORANGE */
-$btn-secondary-color: #ffa200; /* ORANGE LIGHT */
+
+$brand-primary-color: #f58220; /* ORANGE */
+$brand-secondary-color: #ffa200; /* ORANGE LIGHT */
 $checkbox-checked-color: #04ae00; /* GREEN */
-$checkbox-hover-bgcolor: #f5f5f2; /* GREY BARDZO JASNY*/
 $color-notif-posit: #74b67a; /* GREEN NOTIFICATION POSITIVE */
 $color-notif-posit-light: #96cc9b; /* GREEN NOTIFICATION POSITIVE LIGHT */ 
-$sidebar-color: rgba(0, 0, 0, 0.87); /* BLACK */
-$color-grey0: #333333;
-$color-grey1: #979797; /* GREY CIEMNY */
-$color-grey2: #cccccc; /* GREY  JASNIEJSZY*/
-$color-grey3: #e3e3e3; /* GREY JASNY */
-$color-grey4: #f5f5f2; /* GREY  BARDZO JASNY*/
-$nav-user-color: #56819f;
+$sidebar-color: #161616; /* BLACK */
+$border-color-primary: #e3e3e3; /* GREY LIGHTER: border btn background color */
+$border-color-second: #333333; /*  */
+$font-color: #979797; /* GREY */
+$box-shadow-color: #cccccc; /* GREY LIGHT: box shadow */
+$bg-snd-color: #f5f5f2; /* GREY VERY LIGHT: background color */
+$nav-user-color: #56819f; /* NAVY BLUE: user font color*/
+$base-color: #ffffff; /* WHITE: background and fonts on darker bg */
+$overlay-color: #00000080;
+
+/* Border */
+
+$border-light: .5px solid $border-color-primary;
+
+/* Fonts */
 
 $logo-font: 'Satisfy', cursive;
 $text-font: 'Lato', sans-serif;
-$base-color: #ffffff;
+$base-font-size: 16px;
 
-/* Font sizes */
-$paragraph-font-size: 16px;
-
-/* border */
-
-$border-light: .5px solid $color-grey3;
-
-/* Fonts */
-$brand-font: "Open Sans", Helvetica, Arial;
-$paragraph-font: "Open Sans", Helvetica, Arial;
 @font-face {
     font-family: 'Glyphter';
     src: url('../fonts/Glyphter.eot');
@@ -41,6 +39,7 @@ $paragraph-font: "Open Sans", Helvetica, Arial;
     font-weight: normal;
     font-style: normal;
 }
+
 [class*='icon-']:before{
 	display: inline-block;
    font-family: 'Glyphter';
@@ -50,6 +49,7 @@ $paragraph-font: "Open Sans", Helvetica, Arial;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale
 }
+
 .icon-arrow-down:before{content:'\0041';}
 .icon-arrow-down-small:before{content:'\0042';}
 .icon-arrow-left:before{content:'\0043';}
@@ -78,5 +78,3 @@ $paragraph-font: "Open Sans", Helvetica, Arial;
 .icon-trash:before{content:'\005a';}
 .icon-url:before{content:'\0061';}
 .icon-wallet:before{content:'\0062';}
-
-

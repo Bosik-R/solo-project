@@ -1,40 +1,11 @@
 @use "../variables";
 
-.logo-title {
-  font-size: 25px;
-  color: $base-color;
-  font-family: $logo-font;
-}
-
-.hamburger {
-  width:20px;
-  height: 20px;
-  border: 0;
-  border-top: 2px solid $color-grey1;
-  background: transparent;
-  position: relative; 
-  cursor: pointer; 
-  transition: .5 ease;
-}
-.hamburger::before, .hamburger::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  border-top: 2px solid $color-grey1;
-  transform: translateY(7px);
-}
-.hamburger::after {
-  transform: translateY(16px);
-}
-
-
 .sidebar-list {
   display: flex;
   flex-direction: column;
   padding-bottom: 25px;
-  border-bottom: 1px solid $color-grey0;
+  border-bottom: 1px solid $border-color-second;
+
   div {
     display: flex;
     justify-content: flex-start;
@@ -45,8 +16,9 @@
     cursor: pointer;
     background-position: 100% 0;
     background-size: 300%;
-    background-image: linear-gradient(90deg, $color-grey0 50%, transparent 50%);
+    background-image: linear-gradient(90deg, $border-color-second 50%, transparent 50%);
     transition: .7s ease;
+
     ::after {
       content: '';
       display: none;
@@ -55,27 +27,30 @@
       position: absolute;
       left: 0;
       top: 0;
-      background-color: $primary-color;
+      background-color: $brand-primary-color;
       transition: .7s ease;
     }
+
     i, a, span {
       font-size: 14px;
       margin-left: 16px;
-      color: $color-grey1;
+      color: $font-color;
       transition: .7s ease;
       text-decoration: none;
     }
+
     &:hover {
       background-position: 0 100%;
+    
       i,a {
         color: $base-color;
         margin-left: 30px;
       }
+
       ::after {
         display: block;
       }
     }
-    
   }
 }
 
@@ -85,7 +60,10 @@
 
 .sidebar-manager{
   flex-direction: column;
-  margin-left: 20px;
+  align-items: flex-start;
+  margin-left: 14px;
+  padding: 0;
+
   p {
     font-size: 14px;
     margin-top: 25px;
@@ -98,13 +76,15 @@
   align-items: center;
   margin: 15px 0;
 }
+
 .manager-image {
   width: 45px;
   height: 45px;
   border-radius: 50%;
   border: none;
-  background-color: $primary-color;
+  background-color: $brand-primary-color;
   position: relative;
+  
   &::after {
     position: absolute;
     content: '';
@@ -115,22 +95,26 @@
     background-color: $checkbox-checked-color;
     border-radius: 50%;
   }
+
   img {
-    background-color: $primary-color;
+    background-color: $brand-primary-color;
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 }
+
 .manager-name {
   margin-left: 10px;
   text-decoration: none;
   color: $nav-user-color;
 }
+
 .sidebar-profile-wrapper {
   background-color: inherit;
   display: none;
 }
+
 .profile-list {
   display: flex;
   flex-direction: column;

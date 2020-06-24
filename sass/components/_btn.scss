@@ -1,0 +1,53 @@
+.btn {
+  font-size: 18px;
+  color: $base-color;
+  border: none;
+  border-radius: 3px;
+  min-width: 95px;
+  padding: 10px 20px;
+  outline-color: $font-color;
+  background-color: $brand-primary-color;
+  cursor: pointer;
+}
+
+.btn-refresh {
+  height: 40px;
+  width: 40px;
+	margin-left: 10px;
+	padding: 0;
+	padding-top: 3px;
+	min-width: 0;
+} 
+
+.btn-negativ {
+  background-color: $font-color;
+  outline-color: $brand-primary-color;
+}
+
+.btn-close {
+  position: absolute;
+  font-size: 12px;
+  top: 0;
+  right: 0;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.btn-copy {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;  
+  width: 100%;
+  max-width: 150px;  
+  background-color: $border-color-primary;
+  outline-color: $brand-primary-color;
+  
+  i {
+      height: 10px;
+      margin-bottom: 5px;
+  }
+  
+  span {
+      margin-left: 10px;
+  }
+}
