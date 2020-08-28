@@ -3,7 +3,7 @@
 
 const adminInterface = {
 
-  initPages: function(){
+  initPages: function() {
     const thisApp = this;
 
     thisApp.navLinks = document.querySelectorAll('.sidebar-list-buttons div');
@@ -16,8 +16,8 @@ const adminInterface = {
     thisApp.defaultPage = thisApp.pages[0].id;
     let pageMatchingHash = thisApp.defaultPage;
     
-    for (let page of thisApp.pages){
-      if (page.id == idFromHash){
+    for (let page of thisApp.pages) {
+      if (page.id == idFromHash) {
         pageMatchingHash = page.id;
         break;
       }
@@ -27,8 +27,8 @@ const adminInterface = {
 
     window.location.hash = '#/' + pageMatchingHash;
 
-    for (let link of thisApp.navLinks){
-      link.addEventListener('click', function(event){
+    for (let link of thisApp.navLinks) {
+      link.addEventListener('click', function(event) {
         const clickedElement = this;
         event.preventDefault();
 
@@ -51,12 +51,12 @@ const adminInterface = {
       
     }
 
-    thisApp.contentWrapper.addEventListener('click', function(e){
+    thisApp.contentWrapper.addEventListener('click', function(e) {
       e.preventDefault();
       toggleMenu(false);
     });
 
-    document.querySelector('.hamburger').addEventListener('click', function(e){
+    document.querySelector('.hamburger').addEventListener('click', function(e) {
       e.preventDefault();
       toggleMenu();
     });
@@ -77,13 +77,13 @@ const adminInterface = {
     });
 
     document.querySelector('#overlay').addEventListener('click', function(e) {
-      if(e.target === this) {
+      if (e.target === this) {
         closeModal();
       }
     });
 
     document.addEventListener('keyup', function(e) {
-      if(e.keyCode === 27) {
+      if (e.keyCode === 27) {
         closeModal();
       }
     });
@@ -92,7 +92,7 @@ const adminInterface = {
       
       thisApp.activatePage(thisApp.defaultPage);
       
-      for (let profile of thisApp.profileName){
+      for (let profile of thisApp.profileName) {
         profile.innerHTML = '';
       }
     });
@@ -120,10 +120,10 @@ const adminInterface = {
     document.querySelector(modal).classList.add('show');
   },
 
-  startPage: function (){
+  startPage: function() {
     const thisApp = this;
 
-    document.querySelector('#enter').addEventListener('click', function(){
+    document.querySelector('#enter').addEventListener('click', function() {
 
       const inputLogin = document.querySelector('#page-login');
 
@@ -131,14 +131,14 @@ const adminInterface = {
 
       thisApp.profileName = document.querySelectorAll('.profile-name');
       
-      for (let profile of thisApp.profileName){
+      for (let profile of thisApp.profileName) {
 
         profile.innerHTML = inputLogin.value;
       }
     });
   },
 
-  activatePage: function(pageId){
+  activatePage: function(pageId) {
     const thisApp = this;
 
     thisApp.wrapper = document.querySelector('.' + pageId + '-wrapper');
@@ -151,11 +151,11 @@ const adminInterface = {
 
     thisApp.wrapper.innerHTML = generateHTML;
 
-    for (let page of thisApp.pages){
+    for (let page of thisApp.pages) {
       page.classList.toggle('active', page.id == pageId);
     }
 
-    if (pageId == thisApp.defaultPage){
+    if (pageId == thisApp.defaultPage) {
       thisApp.startPage();
     }
 
@@ -206,11 +206,11 @@ const adminInterface = {
     window.location.hash = '#/' + pageId;
   },
 
-  init: function(){
+  init: function() {
     const thisApp = this;
 
     thisApp.initPages();
   }
-
 };
+
 adminInterface.init();
