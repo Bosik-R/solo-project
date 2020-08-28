@@ -147,3 +147,9 @@
     max-width: 265px;
   }
 }
+
+@media(max-width: 767px) {
+  .links-button-area > input[type="text"] {
+    margin-bottom: 15px;
+  }
+}

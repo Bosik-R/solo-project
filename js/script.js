@@ -91,6 +91,10 @@ const adminInterface = {
       e.preventDefault();
       
       thisApp.activatePage(thisApp.defaultPage);
+      
+      for (let profile of thisApp.profileName){
+        profile.innerHTML = '';
+      }
     });
 
     document.querySelectorAll('.button-modal').forEach(function (button) {
@@ -100,7 +104,7 @@ const adminInterface = {
         e.preventDefault();
 
         const id = '.modal-' + clickedElement.id;
-        
+        console.log('modal id: ', id);
         thisApp.openModal(id);
       });
     });
@@ -125,9 +129,9 @@ const adminInterface = {
 
       thisApp.activatePage(thisApp.pages[1].id);
 
-      const profileName = document.querySelectorAll('.profile-name');
+      thisApp.profileName = document.querySelectorAll('.profile-name');
       
-      for (let profile of profileName){
+      for (let profile of thisApp.profileName){
 
         profile.innerHTML = inputLogin.value;
       }

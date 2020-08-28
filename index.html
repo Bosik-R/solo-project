@@ -28,7 +28,7 @@
 		    			<i class="icon-notification"></i>
 		    		</div>
 		    		<div class="profile">
-		    			<i class="icon-profile button-modal"></i>
+		    			<i class="icon-profile button-modal" id="profile"></i>
 		    			<span class="profile-name">Leonard Cohen</span>
 		    		</div>
 		    		<div class="logout">
@@ -87,11 +87,11 @@
 									<i class="icon-notification"></i>
 									<a href="#">Notification</a>
 								</div>
-								<div class="profile">
+								<div class="profile" id="profile-mobile">
 									<i class="icon-profile"></i>
 									<a href="#" class="profile-name">Leonard Cohen</a>
 								</div>
-								<div class="logout button-modal" id="logout1">
+								<div class="logout button-modal" id="logout-mobile">
 									<i class="icon-quit"></i>
 									<a href="#">Log Out</a>
 								</div>
@@ -102,7 +102,7 @@
 			</div>	
 		</div>
 		<div class="overlay" id="overlay">
-			<div class="modal modal-logout modal-logout1" >
+			<div class="modal modal-logout modal-logout-mobile" >
 				<p class="page-title">Do you really want to Quit?</p>
 				<div class="row">
 					<button type="button" class="btn btn-negativ js--close-modal">Cancel</button>				
@@ -194,6 +194,42 @@
 						</div>
 					</div>
 				</form>
+			</div>
+			<div class="modal modal-profile modal-profile-mobile">
+				<i class="btn-close js--close-modal icon-close"></i>
+				<p class="page-title">Persolan Data</p>
+				<form class="links-form" action="Push">
+					<div class="compain-wrapper row">
+						<div class="flex-column component-schema-wrapper">
+							<label for="name">Schema name</label>
+							<input type="text" id="name" placeholder="Name" required>
+						</div>
+						<div class="component-select-wrapper">
+							<select name="compain" id="compain" aria-placeholder="Select compain">
+								<option value="first_choice">First choice</option>
+								<option value="second_choice">Second choice</option>
+							</select>
+						</div>
+						<div class="flex-column component-language-wrapper">
+							<label for="language">Language</label>
+							<select name="language" id="language">
+								<option value="english">EN</option>
+								<option value="german">GR</option>
+							</select>
+						</div>
+					</div>
+					<div class="links-button-area row flex-sb">
+						<input type="text" class="col-sm-12" placeholder="Generate link">
+						<div class="col-sm-12 flex-sb">
+							<button type="button" class="btn btn-negativ btn-copy">
+								<i class="icon-links"></i>
+								<span>Copy link</span> 
+							</button>				
+							<button type="submit" class="btn btn-base">Save</button>
+						</div>
+					</div>
+				</form>
+
 			</div>
 		</div>
 	</header>	

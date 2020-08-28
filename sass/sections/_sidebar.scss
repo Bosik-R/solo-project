@@ -113,9 +113,23 @@
 .sidebar-profile-wrapper {
   background-color: inherit;
   display: none;
+
+  @media (max-width: 767px) {
+    border-top: $border-light;
+    border-color: $border-color-second;
+    display: block;
+  }
 }
 
 .profile-list {
   display: flex;
   flex-direction: column;
+}
+
+.dim {
+  @media (max-width: 767px) {
+    position: relative;
+    left: -200px;
+    opacity: 0.2;
+  }
 }

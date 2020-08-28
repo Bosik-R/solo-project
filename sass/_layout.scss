@@ -12,6 +12,10 @@ body {
   font-family: $text-font;
   font-size: $base-font-size;
   color: $font-color;
+
+  @media(max-width: 767px){
+    font-size: 12px;
+  }
 }
 
 section {
@@ -41,6 +45,15 @@ section {
   position: fixed;
   top: 60px;
   background-color: $sidebar-color;
+
+  @media(max-width: 767px){
+    display: block;
+    height: auto;
+    width: 190px;
+    right: -190px;
+    transition: 0.5s;
+    transition-property: right;
+  }
 }
 
 .content-wrapper {
@@ -51,6 +64,12 @@ section {
   background-color: $bg-snd-color;
   border-top: $border-light;
   border-bottom: $border-light;
+
+  @media(max-width: 767px){
+    margin-left: 0;
+    transition: right 0.7s ease-in-out;
+    overflow: hidden;
+  }
 }
 
 .box-border-shadow{
@@ -58,4 +77,8 @@ section {
   margin: 20px;
   box-shadow: 1px 1px 10px $box-shadow-color;
   border: $border-light; 
+
+  @media (max-width: 767px) {
+    margin: 10px 0;
+  }
 }

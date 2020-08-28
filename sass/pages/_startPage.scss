@@ -27,6 +27,11 @@
   button {
     width: 160px;
   }
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
   
 .input-wrapper {
