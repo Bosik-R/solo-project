@@ -6,36 +6,36 @@
 		<title>Solo-project</title>
 		<link href="https://fonts.googleapis.com/css2?family=Lato&family=Satisfy&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+		<link	rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
 		<header>
-			<div class="container">		
-				<div class="top-nav-wrapper">	
+			<div class="container">
+				<div class="top-nav-wrapper">
 					<div class="top-nav flex-nw">
 						<div class="top-nav-left flex-sb">
 							<span class="logo-title col-sm-10">Just do it</span>
-							<button class="hamburger" type="button" name="button-sidebar"></button>
+							<button	class="hamburger"	type="button"	name="button-sidebar"></button>
 						</div>
-			  	  <div class="top-nav-right">
-			    		<div class="wallet">
-			    			<i class="icon-wallet"></i>
-			    			<span class="wallet-value">$1,500.00</span>
-			    			<i class="icon-arrow-down"></i>
-			    		</div>
-			    		<div class="notif">
-			    			<i class="icon-notification"></i>
-			    		</div>
-			    		<div class="profile">
-			    			<i class="icon-profile button-modal" id="profile"></i>
-			    			<span class="profile-name">Leonard Cohen</span>
-			    		</div>
-			    		<div class="logout">
-			    			<i class="icon-quit button-modal" id="logout"></i>
-			    		</div>
-			    	</div>
-			  	</div>
+						<div class="top-nav-right">
+							<div class="wallet">
+								<i class="icon-wallet"></i>
+								<span class="wallet-value">$1,500.00</span>
+								<i class="icon-arrow-down"></i>
+							</div>
+							<div class="notif">
+								<i class="icon-notification"></i>
+							</div>
+							<div class="profile">
+								<i class="icon-profile button-modal" id="profile"></i>
+								<span class="profile-name">Leonard Cohen</span>
+							</div>
+							<div class="logout">
+								<i class="icon-quit button-modal" id="logout"></i>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="sidebar-wrapper" id="menu">
 					<div class="sidebar">
@@ -74,7 +74,7 @@
 								<p>YOUR MANAGER</p>
 								<div class="your-manager">
 									<div class="manager-image"></div>
-									<a href="#" class="manager-name">Michal A.</a>							
+									<a href="#" class="manager-name">Michal A.</a>
 								</div>
 							</div>
 							<div class="sidebar-profile-wrapper">
@@ -97,16 +97,20 @@
 									</div>
 								</div>
 							</div>
-						</div>	
+						</div>
 					</div>
-				</div>	
+				</div>
 			</div>
 			<div class="overlay" id="overlay">
-				<div class="modal modal-logout modal-logout-mobile" >
+				<div class="modal modal-logout modal-logout-mobile">
 					<p class="page-title">Do you really want to Quit?</p>
 					<div class="row">
-						<button type="button" class="btn btn-negativ js--close-modal">Cancel</button>				
-						<button type="button" class="btn js--close-modal" id="quit-button">Quit</button>
+						<button type="button" class="btn btn-negativ js--close-modal">
+							Cancel
+						</button>
+						<button type="button" class="btn js--close-modal" id="quit-button">
+							Quit
+						</button>
 					</div>
 				</div>
 				<div class="modal modal-addNewLink" id="modal-addNewLink">
@@ -119,7 +123,11 @@
 								<input type="text" id="name" placeholder="Name" required>
 							</div>
 							<div class="component-select-wrapper">
-								<select name="compain" id="compain" aria-placeholder="Select compain">
+								<select
+									name="compain"
+									id="compain"
+									aria-placeholder="Select compain"
+								>
 									<option value="first_choice">First choice</option>
 									<option value="second_choice">Second choice</option>
 								</select>
@@ -137,59 +145,63 @@
 							<div class="field-wrapper">
 								<input type="checkbox" id="ToyStore" value="true" hidden>
 								<label for="ToyStore">
-										<span></span>
-										Toy Store
+									<span></span>
+									Toy Store
 								</label>
 								<i class="icon-show"></i>
 							</div>
 							<div class="field-wrapper">
 								<input type="checkbox" id="bookStore" value="true" hidden>
 								<label for="bookStore">
-										<span></span>
-										Book Store
+									<span></span>
+									Book Store
 								</label>
 								<i class="icon-show"></i>
 							</div>
 							<div class="field-wrapper">
 								<input type="checkbox" id="EShop01" value="true" hidden>
 								<label for="EShop01">
-										<span></span>
-										E-Shop 01
+									<span></span>
+									E-Shop 01
 								</label>
 								<i class="icon-show"></i>
 							</div>
 							<div class="field-wrapper">
 								<input type="checkbox" id="charity" value="true" hidden>
 								<label for="charity">
-										<span></span>
-										Charity
+									<span></span>
+									Charity
 								</label>
 								<i class="icon-show"></i>
 							</div>
 							<div class="field-wrapper">
 								<input type="checkbox" id="MobilleApp" value="true" hidden>
 								<label for="MobilleApp">
-										<span></span>
-										Mobille App
+									<span></span>
+									Mobille App
 								</label>
 								<i class="icon-show"></i>
 							</div>
 							<div class="field-wrapper">
 								<input type="checkbox" id="MobilleStore" value="true" hidden>
 								<label for="MobilleStore">
-										<span></span>
-										Mobille Store
+									<span></span>
+									Mobille Store
 								</label>
 								<i class="icon-show"></i>
 							</div>
 						</div>
 						<div class="links-button-area row flex-sb">
-							<input type="text" class="col-sm-12" placeholder="Generate link">
+							<input
+								type="text"
+								class="col-sm-12"
+								placeholder="Generate link"
+							>
 							<div class="col-sm-12 flex-sb">
 								<button type="button" class="btn btn-negativ btn-copy">
 									<i class="icon-links"></i>
-									<span>Copy link</span> 
-								</button>				
+									<span>Copy link</span>
+								</button>
 								<button type="submit" class="btn btn-base">Save</button>
 							</div>
 						</div>
@@ -202,228 +214,325 @@
 						<div class="compain-wrapper row">
 							<div class="flex-column component-schema-wrapper">
 								<label for="name">Schema name</label>
-								<input type="text" id="name" placeholder="Name" required>
+								<input type="text" id="name-1" placeholder="Name" required>
 							</div>
 							<div class="component-select-wrapper">
-								<select name="compain" id="compain" aria-placeholder="Select compain">
+								<select
+									name="compain"
+									id="compain-1"
+									aria-placeholder="Select compain"
+								>
 									<option value="first_choice">First choice</option>
 									<option value="second_choice">Second choice</option>
 								</select>
 							</div>
 							<div class="flex-column component-language-wrapper">
 								<label for="language">Language</label>
-								<select name="language" id="language">
+								<select name="language" id="language-1">
 									<option value="english">EN</option>
 									<option value="german">GR</option>
 								</select>
 							</div>
 						</div>
 						<div class="links-button-area row flex-sb">
-							<input type="text" class="col-sm-12" placeholder="Generate link">
+							<input
+								type="text"
+								class="col-sm-12"
+								placeholder="Generate link"
+							>
 							<div class="col-sm-12 flex-sb">
 								<button type="button" class="btn btn-negativ btn-copy">
 									<i class="icon-links"></i>
-									<span>Copy link</span> 
-								</button>				
+									<span>Copy link</span>
+								</button>
 								<button type="submit" class="btn btn-base">Save</button>
 							</div>
 						</div>
 					</form>
 				</div>
 			</div>
-		</header>	
+		</header>
 		<div class="container">
-			<div class="content-wrapper" id="content">	
+			<div class="content-wrapper" id="content">
 				<div id="pages">
 					<section id="startPage">
 						<div class="startPage-wrapper"></div>
 					</section>
 					<section id="general">
-						<div class="general-wrapper "></div>
+						<div class="general-wrapper"></div>
 						<div class="wrapper-second-option"></div>
 					</section>
 					<section id="links">
 						<div class="links-wrapper"></div>
-					</section>					
+					</section>
 				</div>
-			</div>	  	
+			</div>
 		</div>
 		<script id="template-startPage" type="text/x-handlebars-template">
-			<div class="overlay show">
-				<div class="startPage-content">
-					<span class="startPage-title">login</span>
-					<form class="startPage-wrapper">
-						<div class="input-wrapper">
-							<i class="icon-login"></i>
-							<input class="" type="text" id="page-login" placeholder="login name" required>
+			<div class='overlay show'>
+				<div class='startPage-content'>
+					<span class='startPage-title'>
+						login
+					</span>
+					<form class='startPage-wrapper'>
+						<div class='input-wrapper'>
+							<i class='icon-login'></i>
+							<input
+								class=''
+								type='text'
+								id='page-login'
+								placeholder='login name'
+								required
+							/>
 						</div>
-						<div class="input-wrapper">
-							<i class="icon-password"></i>
-							<input type="password" name="password" id="password" placeholder="password" required>
+						<div class='input-wrapper'>
+							<i class='icon-password'></i>
+							<input
+								type='password'
+								name='password'
+								id='password'
+								placeholder='password'
+								required
+							/>
 						</div>
-						<button class="btn" type="submit" id="enter">Enter</button>
+						<button class='btn' type='submit' id='enter'>
+							Enter
+						</button>
 					</form>
 				</div>
 			</div>
 		</script>
 		<script id="template-general" type="text/x-handlebars-template">
-			<div class="general-content box-border-shadow">
-				<p class="page-title">GENERAL STATISTIC</p>
-				<div class="date-picker flex-center col-sm-12">
-					<div class="date-picker-plugin">
-						<div class="date-start">
+			<div class='general-content box-border-shadow'>
+				<p class='page-title'>
+					GENERAL STATISTIC
+				</p>
+				<div class='date-picker flex-center col-sm-12'>
+					<div class='date-picker-plugin'>
+						<div class='date-start'>
 							07.06.2020
 						</div>
-						<div class="date-end">
+						<div class='date-end'>
 							07.06.2020
 						</div>
-						<i class="icon-calendar"></i>
+						<i class='icon-calendar'></i>
 					</div>
-					<button class="btn btn-refresh flex-center">
-						<i class="icon-refresh"></i>
-					</button>	
+					<button class='btn btn-refresh flex-center'>
+						<i class='icon-refresh'></i>
+					</button>
 				</div>
-				<div class="flex-center row">
-					<div class="chart-stats-column col-sm-12 col-lg-6 flex-center">
-						<div class="visit-signups flex-sb">
-							<span>Visit Signups</span>
-							<span>124</span>
+				<div class='flex-center row'>
+					<div class='chart-stats-column col-sm-12 col-lg-6 flex-center'>
+						<div class='visit-signups flex-sb'>
+							<span>
+								Visit Signups
+							</span>
+							<span>
+								124
+							</span>
 						</div>
-						<div class="net-deposite flex-sb">
-							<span>Net deposite</span>
-							<span>564</span>
-						</div>
-					</div>
-					<div class="chart-stats-column col-sm-12 col-lg-6 flex-center">
-						<div class="ftd flex-sb">
-							<span>FTD</span>
-							<span>445</span>
-						</div>
-						<div class="turn-over flex-sb">
-							<span>Turn over</span>
-							<span>432</span>
+						<div class='net-deposite flex-sb'>
+							<span>
+								Net deposite
+							</span>
+							<span>
+								564
+							</span>
 						</div>
 					</div>
-				</div>	
-				<div class="chart col-sm-12">
-					<p class="chart-title row">Earning charts</p>
-					<canvas class="myChart" id="myChart"></canvas>
+					<div class='chart-stats-column col-sm-12 col-lg-6 flex-center'>
+						<div class='ftd flex-sb'>
+							<span>
+								FTD
+							</span>
+							<span>
+								445
+							</span>
+						</div>
+						<div class='turn-over flex-sb'>
+							<span>
+								Turn over
+							</span>
+							<span>
+								432
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class='chart col-sm-12'>
+					<p class='chart-title row'>
+						Earning charts
+					</p>
+					<canvas class='myChart' id='myChart'></canvas>
 				</div>
 			</div>
 		</script>
 		<script id="template-links" type="text/x-handlebars-template">
-			<div class="links-content box-border-shadow">
-				<p class="page-title">LINKS</p>
-				<div class="flex-column">
-				<div class="row flex-center">
-					<button class="btn btn-base button-modal" type="button" id="addNewLink">+ add new</button>
-				</div>
-				<div class="links-list flex-column">
-					<div class="link row col-sm-12">
-						<span class="link-title col-sm-4 col-md-5">Home page</span>
-						<div class="link-adress flex-sb col-sm-8 col-md-7">
-							<a href="#" class="col-sm-6">http://www.homepage.com
-							</a>
-							<div class="link-adress-options col-sm-6">
-								<i class="icon-links"></i>
-								<i class="icon-trash"></i>
-							</div>										
+			<div class='links-content box-border-shadow'>
+				<p class='page-title'>
+					LINKS
+				</p>
+				<div class='flex-column'>
+					<div class='row flex-center'>
+						<button
+							class='btn btn-base button-modal'
+							type='button'
+							id='addNewLink'
+						>
+							+ add new
+						</button>
+					</div>
+					<div class='links-list flex-column'>
+						<div class='link row col-sm-12'>
+							<span class='link-title col-sm-4 col-md-5'>
+								Home page
+							</span>
+							<div class='link-adress flex-sb col-sm-8 col-md-7'>
+								<a href='#' class='col-sm-6'>
+									http://www.homepage.com
+								</a>
+								<div class='link-adress-options col-sm-6'>
+									<i class='icon-links'></i>
+									<i class='icon-trash'></i>
+								</div>
+							</div>
+						</div>
+						<div class='link row col-sm-12'>
+							<span class='link-title col-sm-4 col-md-5'>
+								Currently offer
+							</span>
+							<div class='link-adress flex-sb col-sm-8 col-md-7'>
+								<a href='#' class='col-sm-6'>
+									http://www.currently.com
+								</a>
+								<div class='link-adress-options col-sm-6'>
+									<i class='icon-links'></i>
+									<i class='icon-trash'></i>
+								</div>
+							</div>
+						</div>
+						<div class='link row col-sm-12'>
+							<span class='link-title col-sm-4 col-md-5'>
+								Blurpix
+							</span>
+							<div class='link-adress flex-sb col-sm-8 col-md-7'>
+								<a href='#' class='col-sm-6'>
+									http://www.blurpix.com
+								</a>
+								<div class='link-adress-options col-sm-6'>
+									<i class='icon-links'></i>
+									<i class='icon-trash'></i>
+								</div>
+							</div>
+						</div>
+						<div class='link row col-sm-12'>
+							<span class='link-title col-sm-4 col-md-5'>
+								Your Site
+							</span>
+							<div class='link-adress flex-sb col-sm-8 col-md-7'>
+								<a href='#' class='col-sm-6'>
+									http://www.yoursite.com
+								</a>
+								<div class='link-adress-options col-sm-6'>
+									<i class='icon-links'></i>
+									<i class='icon-trash'></i>
+								</div>
+							</div>
+						</div>
+						<div class='link row col-sm-12'>
+							<span class='link-title col-sm-4 col-md-5'>
+								Google
+							</span>
+							<div class='link-adress flex-sb col-sm-8 col-md-7'>
+								<a href='#' class='col-sm-6'>
+									http://www.google.com
+								</a>
+								<div class='link-adress-options col-sm-6'>
+									<i class='icon-links'></i>
+									<i class='icon-trash'></i>
+								</div>
+							</div>
+						</div>
+						<div class='link row col-sm-12'>
+							<span class='link-title col-sm-4 col-md-5'>
+								Facebook
+							</span>
+							<div class='link-adress flex-sb col-sm-8 col-md-7'>
+								<a href='#' class='col-sm-6'>
+									http://www.facebook.com
+								</a>
+								<div class='link-adress-options col-sm-6'>
+									<i class='icon-links'></i>
+									<i class='icon-trash'></i>
+								</div>
+							</div>
+						</div>
+						<div class='link row col-sm-12'>
+							<span class='link-title col-sm-4 col-md-5'>
+								Dashboard
+							</span>
+							<div class='link-adress flex-sb col-sm-8 col-md-7'>
+								<a href='#' class='col-sm-6'>
+									http://www.dashboard.com
+								</a>
+								<div class='link-adress-options col-sm-6'>
+									<i class='icon-links'></i>
+									<i class='icon-trash'></i>
+								</div>
+							</div>
+						</div>
+						<div class='link row col-sm-12'>
+							<span class='link-title col-sm-4 col-md-5'>
+								Blurax
+							</span>
+							<div class='link-adress flex-sb col-sm-8 col-md-7'>
+								<a href='#' class='col-sm-6'>
+									http://www.blurax.com
+								</a>
+								<div class='link-adress-options col-sm-6'>
+									<i class='icon-links'></i>
+									<i class='icon-trash'></i>
+								</div>
+							</div>
+						</div>
+						<div class='link row col-sm-12'>
+							<span class='link-title col-sm-4 col-md-5'>
+								Piece of Wine
+							</span>
+							<div class='link-adress flex-sb col-sm-8 col-md-7'>
+								<a href='#' class='col-sm-6'>
+									http://www.pieceofwine.com
+								</a>
+								<div class='link-adress-options col-sm-6'>
+									<i class='icon-links'></i>
+									<i class='icon-trash'></i>
+								</div>
+							</div>
+						</div>
+						<div class='link row col-sm-12'>
+							<span class='link-title col-sm-4 col-md-5'>
+								Twitter
+							</span>
+							<div class='link-adress flex-sb col-sm-8 col-md-7'>
+								<a href='#' class='col-sm-6'>
+									http://www.twitter.com
+								</a>
+								<div class='link-adress-options col-sm-6'>
+									<i class='icon-links'></i>
+									<i class='icon-trash'></i>
+								</div>
+							</div>
 						</div>
 					</div>
-					<div class="link row col-sm-12">
-						<span class="link-title col-sm-4 col-md-5">Currently offer</span>
-						<div class="link-adress flex-sb col-sm-8 col-md-7">
-							<a href="#" class="col-sm-6">http://www.currently.com</a>
-							<div class="link-adress-options col-sm-6">
-								<i class="icon-links"></i>
-								<i class="icon-trash"></i>
-							</div>										
-						</div>
+					<div class='row flex-center'>
+						<button
+							class='btn btn-base button-modal'
+							type='button'
+							id='addNewLink'
+						>
+							+ add new
+						</button>
 					</div>
-					<div class="link row col-sm-12">
-						<span class="link-title col-sm-4 col-md-5">Blurpix</span>
-						<div class="link-adress flex-sb col-sm-8 col-md-7">
-							<a href="#" class="col-sm-6">http://www.blurpix.com</a>
-							<div class="link-adress-options col-sm-6">
-								<i class="icon-links"></i>
-								<i class="icon-trash"></i>
-							</div>										
-						</div>
-					</div>
-					<div class="link row col-sm-12">
-						<span class="link-title col-sm-4 col-md-5">Your Site</span>
-						<div class="link-adress flex-sb col-sm-8 col-md-7">
-							<a href="#" class="col-sm-6">http://www.yoursite.com</a>
-							<div class="link-adress-options col-sm-6">
-								<i class="icon-links"></i>
-								<i class="icon-trash"></i>
-							</div>										
-						</div>
-					</div>
-					<div class="link row col-sm-12">
-						<span class="link-title col-sm-4 col-md-5">Google</span>
-						<div class="link-adress flex-sb col-sm-8 col-md-7">
-							<a href="#" class="col-sm-6">http://www.google.com</a>
-							<div class="link-adress-options col-sm-6">
-								<i class="icon-links"></i>
-								<i class="icon-trash"></i>
-							</div>										
-						</div>
-					</div>
-					<div class="link row col-sm-12">
-						<span class="link-title col-sm-4 col-md-5">Facebook</span>
-						<div class="link-adress flex-sb col-sm-8 col-md-7">
-							<a href="#" class="col-sm-6">http://www.facebook.com</a>
-							<div class="link-adress-options col-sm-6">
-								<i class="icon-links"></i>
-								<i class="icon-trash"></i>
-							</div>										
-						</div>
-					</div>
-					<div class="link row col-sm-12">
-						<span class="link-title col-sm-4 col-md-5">Dashboard</span>
-						<div class="link-adress flex-sb col-sm-8 col-md-7">
-							<a href="#" class="col-sm-6">http://www.dashboard.com</a>
-							<div class="link-adress-options col-sm-6">
-								<i class="icon-links"></i>
-								<i class="icon-trash"></i>
-							</div>										
-						</div>
-					</div>
-					<div class="link row col-sm-12">
-						<span class="link-title col-sm-4 col-md-5">Blurax</span>
-						<div class="link-adress flex-sb col-sm-8 col-md-7">
-							<a href="#" class="col-sm-6">http://www.blurax.com</a>
-							<div class="link-adress-options col-sm-6">
-								<i class="icon-links"></i>
-								<i class="icon-trash"></i>
-							</div>										
-						</div>
-					</div>
-					<div class="link row col-sm-12">
-						<span class="link-title col-sm-4 col-md-5">Piece of Wine</span>
-						<div class="link-adress flex-sb col-sm-8 col-md-7">
-							<a href="#" class="col-sm-6">http://www.pieceofwine.com</a>
-							<div class="link-adress-options col-sm-6">
-								<i class="icon-links"></i>
-								<i class="icon-trash"></i>
-							</div>										
-						</div>
-					</div>
-					<div class="link row col-sm-12">
-						<span class="link-title col-sm-4 col-md-5">Twitter</span>
-						<div class="link-adress flex-sb col-sm-8 col-md-7">
-							<a href="#" class="col-sm-6">http://www.twitter.com</a>
-							<div class="link-adress-options col-sm-6">
-								<i class="icon-links"></i>
-								<i class="icon-trash"></i>
-							</div>										
-						</div>
-					</div>
-				</div>		
-				<div class="row flex-center">
-					<button class="btn btn-base button-modal" type="button" id="addNewLink">+ add new</button>
-				</div>
 				</div>
 			</div>
 		</script>

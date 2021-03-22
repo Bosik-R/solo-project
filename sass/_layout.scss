@@ -76,8 +76,8 @@ section {
   background-color: $base-color;
   margin: 20px;
   box-shadow: 1px 1px 10px $box-shadow-color;
-  border: $border-light; 
-
+  border: $border-light;
+  
   @media (max-width: 767px) {
     margin: 10px 0;
   }
